@@ -24,6 +24,8 @@ jobs:
         uses: oven-sh/setup-bun@v1
       - name: Install, build, and upload your site
         run: bun install && bun run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Upload your site to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
